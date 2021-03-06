@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@0,500;1,400&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #e1e5f2;
+  color: rgb(104, 102, 102);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ol,
+ul {
+  list-style-type: none;
+  padding: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  float: left;
+  font-size: 34px;
+  font-weight: bold;
+  margin-right: -1px;
   color: white;
+  margin-top: -1px;
+  margin: 2px;
+  text-align: center;
+  width: 98px;
+  height: 98px;
+  background-color: rgb(84, 146, 228);
+  bottom: 1px solid rgb(84, 146, 228);
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.square:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game {
+  background-color: white;
+  width: 506px;
+  padding: 50px 0 80px;
+  margin: 25px auto;
+  box-shadow: 6px 3px 6px 6px #cfd4e6;
+}
+
+.game-info {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.game-info button {
+  padding: 10px;
+  border: none;
+  margin: 5px 0px;
+  border-radius: 5px;
+}
+
+.game-info button:hover {
+  background-color: #d1d9e2;
+  cursor: pointer;
+  box-shadow: none;
 }
